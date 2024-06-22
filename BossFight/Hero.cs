@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BossFight
+{
+    internal class Hero : GameCharacter
+    {
+        public Hero(int health, int streangth, int stamina) : base(health, stamina)
+        {
+            _strength = streangth;
+        }
+        public void Figth(Boss boss)
+        {
+            if (_stamina > 0)
+            {
+                _stamina -= 10;
+                boss._health -= _strength;
+                Console.WriteLine($"Hero has hit boss for {_strength} damage!");
+            }
+            else if (_stamina <= 0) 
+            {
+                Recharge();
+            }
+        }
+    }
+}
