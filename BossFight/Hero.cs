@@ -17,8 +17,10 @@ namespace BossFight
             if (_stamina > 0)
             {
                 _stamina -= 10;
-                boss._health -= _strength;
+                var damageTaken = _strength;
+                boss.LooseHealth(damageTaken);
                 Console.WriteLine($"Hero has hit boss for {_strength} damage!");
+                Console.WriteLine($"Boss has {boss._health} health left");
             }
             else if (_stamina <= 0) 
             {

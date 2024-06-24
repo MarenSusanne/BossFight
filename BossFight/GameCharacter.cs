@@ -18,10 +18,15 @@ namespace BossFight
             _health = health;
             maxStamina = stamina;
             _stamina = maxStamina;
+
         }
         public void Recharge()
         {
             _stamina = maxStamina;
+        }
+        public void LooseHealth(int damageTaken)
+        {
+            _health -= damageTaken;
         }
 
     }

@@ -23,7 +23,7 @@ namespace BossFight
                     Console.WriteLine("The boss has defeated the hero!");
                     inFigth=false;
                 }
-                else if(boss._health <= 0)
+                if(boss._health <= 0)
                 {
                     Console.WriteLine("The hero has defeated the boss!");
                     inFigth=false;

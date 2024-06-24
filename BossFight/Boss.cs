@@ -14,7 +14,7 @@ namespace BossFight
         public static int GiveBossStrength()
         {
             Random random = new Random();
-            var rnd = random.Next(0, 31);
+            var rnd = random.Next(0, 21);
             return rnd;
         }
         public void Figth(Hero hero)
@@ -23,8 +23,9 @@ namespace BossFight
             {
                 _stamina -= 10;
                 int strength = GiveBossStrength();
-                hero._health -= strength;
+                hero.LooseHealth(strength);
                 Console.WriteLine($"Boss has hit hero for {strength} damage!");
+                Console.WriteLine($"Hero has {hero._health} health left");
             }
             else if (_stamina <= 0)
             {

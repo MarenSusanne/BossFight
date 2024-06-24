@@ -11,3 +11,5 @@
         }
     }
 }
+
+//ville lagt en metode LooseHealth(int damageTaken) i baseklassen, og i fightmetoden da kalt motstanderens LooseHealthMetode
